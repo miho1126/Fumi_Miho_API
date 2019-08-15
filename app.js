@@ -31,16 +31,16 @@ $(document).ready(function () {
               //天気データ呼び出し成功時の挙動
               success: function (data) {                
                   if (data.weather[0].main === "Clear") {
-                      
+                      $('body').css('background-image', 'url(Sunny.jpg)');
                       $('.dayWeather').text("晴れ");
                   } else if (data.weather[0].main === "Rain") {
-                      $('body').css
+                      $('body').css('background-image', 'url(Rain.jpg)');
                       $('.dayWeather').text("雨");
                   } else if (data.weather[0].main === "Clouds") {
-                      $('body').css
+                      $('body').css('background-image', 'url(Cloudy.jpg)');
                       $('.dayWeather').text("くもり");
                   } else if (data.weather[0].main === "Snow") {
-                      $('body').css
+                      $('body').css('background-image', 'url(Snowy.jpg)');
                       $('.dayWeather').text("雪");
                   }
 
@@ -118,16 +118,16 @@ $(document).ready(function () {
           //天気データ呼び出し成功時の挙動
           success: function (data) {
               if (data.weather[0].main === "Sunny" || data.weather[0].main === "Clear") {
-                 
+                  $('body').css('background-image', 'url(Sunny.jpg)');
                   $('.dayWeather').text("晴れ");
               } else if (data.weather[0].main === "Rain") {
-                
+                  $('body').css('background-image', 'url(Rain.jpg)');
                   $('.dayWeather').text("雨");
               } else if (data.weather[0].main === "Clouds") {
-                 
+                  $('body').css('background-image', 'url(Cloudy.jpg)');
                   $('.dayWeather').text("くもり");
               } else if (data.weather[0].main === "Snow") {
-                 
+                  $('body').css('background-image', 'url(Snowy.jpg)');
                   $('.dayWeather').text("雪");
               }
 
