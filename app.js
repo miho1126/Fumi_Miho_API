@@ -1,7 +1,7 @@
 $(document).ready(function () {
   'use strict'
 
-  const APIKEY = "b0fca0711b8aefd394528920f6ba428d";
+  const APIKEY = "baf712d9f62866ea8d5e5c3295026bbc";
 
   //翌日9時のデータの場所を割り出す
   const date = new Date();
@@ -31,16 +31,16 @@ $(document).ready(function () {
               //天気データ呼び出し成功時の挙動
               success: function (data) {                
                   if (data.weather[0].main === "Clear") {
-                      $('body').css('background-image', 'url(Sunny.jpg)');
+                      
                       $('.dayWeather').text("晴れ");
                   } else if (data.weather[0].main === "Rain") {
-                      $('body').css('background-image', 'url(Rain.jpg)');
+                      $('body').css
                       $('.dayWeather').text("雨");
                   } else if (data.weather[0].main === "Clouds") {
-                      $('body').css('background-image', 'url(Cloudy.jpg)');
+                      $('body').css
                       $('.dayWeather').text("くもり");
                   } else if (data.weather[0].main === "Snow") {
-                      $('body').css('background-image', 'url(Snowy.jpg)');
+                      $('body').css
                       $('.dayWeather').text("雪");
                   }
 
@@ -118,16 +118,16 @@ $(document).ready(function () {
           //天気データ呼び出し成功時の挙動
           success: function (data) {
               if (data.weather[0].main === "Sunny" || data.weather[0].main === "Clear") {
-                  $('body').css('background-image', 'url(Sunny.jpg)');
+                 
                   $('.dayWeather').text("晴れ");
               } else if (data.weather[0].main === "Rain") {
-                  $('body').css('background-image', 'url(Rain.jpg)');
+                
                   $('.dayWeather').text("雨");
               } else if (data.weather[0].main === "Clouds") {
-                  $('body').css('background-image', 'url(Cloudy.jpg)');
+                 
                   $('.dayWeather').text("くもり");
               } else if (data.weather[0].main === "Snow") {
-                  $('body').css('background-image', 'url(Snowy.jpg)');
+                 
                   $('.dayWeather').text("雪");
               }
 
