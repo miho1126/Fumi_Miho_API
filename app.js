@@ -32,19 +32,19 @@ $(document).ready(function () {
                 success: function (data) {
                     console.log(data.weather[0].main );
                     if (data.weather[0].main === "Clear") {
-                      $('.dayWeather-bg1').addClass( 'bg-warning');
+                      $('.dayWeather-bg1').addClass( 'bprogress-bar progress-bar-striped progress-bar-animated bg-danger');
                         $('.dayWeather').text("晴れ");
                     } else if (data.weather[0].main === "Rain") {
-                      $('.dayWeather-bg1').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-danger');
+                      $('.dayWeather-bg1').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-primary');
                         $('.dayWeather1').text("雨");
                     } else if (data.weather[0].main === "Clouds") {
-                      $('.dayWeather-bg1').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-danger');
+                      $('.dayWeather-bg1').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-secondary');
                         $('.dayWeather').text("くもり");
                     } else if (data.weather[0].main === "Snow") {
-                      $('.dayWeather-bg1').addClass( 'bg-warning');
+                      $('.dayWeather-bg1').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-white');
                         $('.dayWeather').text("雪");
                     } else if (data.weather[0].main === "Mist") {
-                        $('.dayWeather-bg1').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-danger');
+                        $('.dayWeather-bg1').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-sucsess');
                         $('.dayWeather').text("霧");
                     }
   
@@ -67,27 +67,37 @@ $(document).ready(function () {
                     const targetData2 = data.list[whichDayAfterTomorrowWeatherData];
   
                     if (targetData1.weather[0].main === "Clear") {
-                      
+                        $('.dayWeather-bg2').addClass( 'bprogress-bar progress-bar-striped progress-bar-animated bg-danger');
                         $('.tomorrowWeather').text("晴れ");
                     } else if (targetData1.weather[0].main === "Rain") {
-                      
+                        $('.dayWeather-bg2').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-primary');
                         $('.tomorrowWeather').text("雨");
                     } else if (targetData1.weather[0].main === "Clouds") {
-                     
+                        $('.dayWeather-bg2').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-secondary');
                         $('.tomorrowWeather').text("くもり");
                     } else if (targetData1.weather[0].main === "Snow") {
-                     
+                        $('.dayWeather-bg2').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-white');
                         $('.tomorrowWeather').text("雪");
+                    } else if (targetData1.weather[0].main ===  "Mist") {
+                        $('.dayWeather-bg2').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-sucsess');
+                        $('.dayWeather').text("霧");
                     }
   
                     if (targetData2.weather[0].main === "Clear") {
+                        $('.dayWeather-bg3').addClass( 'bprogress-bar progress-bar-striped progress-bar-animated bg-danger');
                         $('.dayAfterTomorrowWeather').text("晴れ");
                     } else if (targetData2.weather[0].main === "Rain") {
+                        $('.dayWeather-bg3').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-primary');
                         $('.dayAfterTomorrowWeather').text("雨");
                     } else if (targetData2.weather[0].main === "Clouds") {
+                        $('.dayWeather-bg3').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-secondary');
                         $('.dayAfterTomorrowWeather').text("くもり");
                     } else if (targetData2.weather[0].main === "Snow") {
+                        $('.dayWeather-bg3').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-white');
                         $('.dayAfterTomorrowWeather').text("雪");
+                    } else if (targetData2.weather[0].main === "Mist") {
+                        $('.dayWeather-bg3').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-sucsess');
+                        $('.dayWeather').text("霧");
                     }
   
                     ///各データの表示
@@ -126,17 +136,20 @@ $(document).ready(function () {
             //天気データ呼び出し成功時の挙動
             success: function (data) {
                 if (data.weather[0].main === "Sunny" || data.weather[0].main === "Clear") {
-                  $('.dayWeather-bg').addClass( 'bg-warning');
+                  $('.dayWeather-bg').addClass( 'bprogress-bar progress-bar-striped progress-bar-animated bg-danger');
                     $('.dayWeather').text("晴れ");
                 } else if (data.weather[0].main === "Rain") {
-                  $('.dayWeather-bg').addClass( 'background-color','blue');
+                  $('.dayWeather-bg').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-primary');
                     $('.dayWeather').text("雨");
                 } else if (data.weather[0].main === "Clouds") {
-                  $('.dayWeather-bg').addClass( 'bg-warning');
+                  $('.dayWeather-bg').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-secondary');
                     $('.dayWeather').text("くもり");
                 } else if (data.weather[0].main === "Snow") {
-                  $('.dayWeather-bg').addClass( 'bg-warning');
+                  $('.dayWeather-bg').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-white');
                     $('.dayWeather').text("雪");
+                } else if (data.weather[0].main === "Mist") {
+                    $('.dayWeather-bg1').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-sucsess');
+                    $('.dayWeather').text("霧");
                 }
   
                 //各データの表示
