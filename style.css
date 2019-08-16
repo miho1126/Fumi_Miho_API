@@ -1,2 +1,27 @@
 @charset "UTF-8";
 
+#carouselExampleControls {
+  font-size: 4em;
+  height: 100%;
+}
+
+.dayWeatherIcon,.tomorrowWeatherIcon,.dayAfterTomorrowWeatherIcon{
+  width: 300px;
+  height: 300px;
+}
+
+.blue {
+  background-color: blue;
+}
+/* SP MediaQuery */
+@media only screen and (min-width:375px) {
+  #carouselExampleControls {
+    font-size: 2em;
+    height: 100%;
+  }
+  img {
+    width: 78%;
+  }
+
+}
+/* SP MediaQuery end */
