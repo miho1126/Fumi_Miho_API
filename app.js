@@ -30,18 +30,22 @@ $(document).ready(function () {
                 data: "lat=" + lat + "&lon=" + lon + "&appid=" + APIKEY,
                 //天気データ呼び出し成功時の挙動
                 success: function (data) {
+                    console.log(data.weather[0].main );
                     if (data.weather[0].main === "Clear") {
-                      $('.dayWeather-bg').addClass( 'bg-warning');
+                      $('.dayWeather-bg1').addClass( 'bg-warning');
                         $('.dayWeather').text("晴れ");
                     } else if (data.weather[0].main === "Rain") {
-                      $('.dayWeather-bg').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-danger');
-                        $('.dayWeather').text("雨");
+                      $('.dayWeather-bg1').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-danger');
+                        $('.dayWeather1').text("雨");
                     } else if (data.weather[0].main === "Clouds") {
-                      $('.dayWeather-bg').addClass( 'bg-warning');
+                      $('.dayWeather-bg1').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-danger');
                         $('.dayWeather').text("くもり");
                     } else if (data.weather[0].main === "Snow") {
-                      $('.dayWeather-bg').addClass( 'bg-warning');
+                      $('.dayWeather-bg1').addClass( 'bg-warning');
                         $('.dayWeather').text("雪");
+                    } else if (data.weather[0].main === "Mist") {
+                        $('.dayWeather-bg1').addClass( 'progress-bar progress-bar-striped progress-bar-animated bg-danger');
+                        $('.dayWeather').text("霧");
                     }
   
                     //各データの表示
