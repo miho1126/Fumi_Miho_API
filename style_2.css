@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+.carousel-item {
+  height: 100vh;
+}
+
+
+.header {
+  height: 15vh;
+}
+
+.title {
+  font-size: 3rem;
+  line-height: 15vh;
+}
+
+.dayWeatherIcon,.tomorrowWeatherIcon,.dayAfterTomorrowWeatherIcon{
+  width: 300px;
+  height: 300px;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2{
+  font-size: 4rem;
+}
