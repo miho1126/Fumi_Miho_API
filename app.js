@@ -30,13 +30,13 @@ $(document).ready(function () {
                 data: "lat=" + lat + "&lon=" + lon + "&appid=" + APIKEY,
                 //天気データ呼び出し成功時の挙動
                 success: function (data) {
-                    console.log(data.weather[0].main);
+                    // console.log(data.weather[0].main);
                     if (data.weather[0].main === "Clear") {
                         $('.dayWeather-bg1').addClass('bprogress-bar progress-bar-striped progress-bar-animated bg-danger');
                         $('.dayWeather').text("晴れ");
                     } else if (data.weather[0].main === "Rain") {
                         $('.dayWeather-bg1').addClass('progress-bar progress-bar-striped progress-bar-animated bg-primary');
-                        $('.dayWeather1').text("雨");
+                        $('.dayWeather').text("雨");
                     } else if (data.weather[0].main === "Clouds") {
                         $('.dayWeather-bg1').addClass('progress-bar progress-bar-striped progress-bar-animated bg-secondary');
                         $('.dayWeather').text("くもり");
